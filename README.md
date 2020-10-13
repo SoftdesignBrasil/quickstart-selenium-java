@@ -1,4 +1,4 @@
-# Automação Web Utilizando Selenium com Java
+# Automação Web utilizando Selenium com Java
 
 ## Requisitos
 
