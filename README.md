@@ -14,7 +14,7 @@
 
 ### Dependências
 
-![](dependencias.JPG)
+![](img/dependencias.JPG)
 
 
 ## Configurar o projeto utilizando IntelliJ IDEA
@@ -31,7 +31,7 @@ Para facilitar a estrutura do projeto utilize as seguintes configurações inici
 
 5. Clique em **Next**
 
-![](inicioProjeto.jpg)
+![](img/inicioProjeto.jpg)
 
 ## Nome do projeto e ids
 
@@ -39,17 +39,17 @@ Para facilitar a estrutura do projeto utilize as seguintes configurações inici
 
 1. Clique em **Finish** e o Maven irá fazer as principais configurações do projeto 
 
-![](nomeProjeto.JPG)
+![](img/nomeProjeto.JPG)
 
 ### Configuração para gerar relatórios com o plugin surefire reports
 
 * No arquivo pom.xml adione a seguinte configuração logo depois do final da tag ``<build>``
 
-![](reporting.JPG)
+![](img/reporting.JPG)
 
 * Ainda no pom.xml adicione dentro da tag ``<plugins>`` a seguinte configuração:
 
-![](caminhoTesteReport.JPG)
+![](img/caminhoTesteReport.JPG)
 
 **Observação:** o caminho informado na tag ``<include>`` vária de acordo com os nomes dos ids informados no início do projeto.
 
