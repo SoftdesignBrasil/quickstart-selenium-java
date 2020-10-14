@@ -5,7 +5,7 @@
 ## Requisitos
 
 * JDK 8 ou superior <a href="https://www.oracle.com/br/java/technologies/oracle-java-archive-downloads.html" target="_blank">Página para download</a>
-* Apache Maven <a href="https://maven.apache.org/download.cgi" target="_blank">Página oficial para dowload</a>
+* Apache Maven <a href="https://maven.apache.org/download.cgi" target="_blank">Página oficial para download</a>
 
 **Observação:** depois que fizer o download do Apache Maven, não se esqueça de adicioná-lo como uma variável de ambiente no seu sistema operacional.
 
