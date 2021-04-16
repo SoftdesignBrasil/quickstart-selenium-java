@@ -1,29 +1,35 @@
 package br.com.softdesign.utilitarios;
 
+import com.github.javafaker.Faker;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class DadosAleatorios {
 
-    public static String nomeAletario() {
-        List<String> nomes = Arrays.asList("José", "Maria", "João", "Astrogildo");
-        return nomes.get(new Random().nextInt(nomes.size()));
+    private DadosAleatorios() {
     }
 
-    public static String sobreNomeAleatorio() {
-        List<String> sobrenomes = Arrays.asList("Costa", "Figueredo", "Lima", "Freitas");
-        return sobrenomes.get(new Random().nextInt(sobrenomes.size()));
+    private static final Faker FALSO = new Faker(new Locale("pt-br"));
+
+    public static String gerarNomeAleatorio() {
+        return FALSO.name().firstName();
     }
 
-    public static String codigoPostalAleatorio() {
-        List<String> codigosPostais = Arrays.asList("1234", "5678", "9841", "6781");
-        return codigosPostais.get(new Random().nextInt(codigosPostais.size()));
+    public static String gerarSobreNomeAleatorio() {
+        return FALSO.name().lastName();
     }
 
-    public static String clienteRegistradoAletaorio() {
-        List<String> usuariosRegistrados = Arrays.asList("Hermoine Granger", "Harry Potter",
-                "Ron Weasly", "Albus Dumbledore", "Neville Longbottom");
-        return usuariosRegistrados.get(new Random().nextInt(usuariosRegistrados.size()));
+    public static String gerarCodigoPostalAleatorio() {
+        return FALSO.address().zipCode();
+    }
+
+    public static String retornarClienteRegistradoAletaorio() {
+        String[] usuariosRegistrados = {"Hermoine Granger", "Harry Potter",
+                "Ron Weasly", "Albus Dumbledore", "Neville Longbottom"};
+
+        return usuariosRegistrados[new Random().nextInt(usuariosRegistrados.length)];
     }
 }

@@ -11,7 +11,7 @@ public class ClientePagina extends BasePagina {
     }
 
     public String selecionarCliente() {
-        String clienteRegistrado = DadosAleatorios.clienteRegistradoAletaorio();
+        String clienteRegistrado = DadosAleatorios.retornarClienteRegistradoAletaorio();
         getInteracao().selecionarOpcaoCaixaTextoVisivel(By.id("userSelect"), clienteRegistrado);
         getInteracao().clicarElemento(By.cssSelector("button[type = \"submit\"]"));
         return clienteRegistrado;

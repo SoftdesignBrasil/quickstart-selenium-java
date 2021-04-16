@@ -14,10 +14,6 @@ public class Interacao {
         this.webDriver = webDriver;
     }
 
-    private WebElement pesquisarElemento(By tipoPesquisa) {
-        return webDriver.findElement(tipoPesquisa);
-    }
-
     public String retornarTextoElemento(By tipoPesquisa) {
         return pesquisarElemento(tipoPesquisa).getText();
     }
@@ -43,5 +39,9 @@ public class Interacao {
 
     public void selecionarOpcaoCaixaTextoVisivel(By tipoPesquisa, String valorVisivel) {
         new Select(pesquisarElemento(tipoPesquisa)).selectByVisibleText(valorVisivel);
+    }
+
+    private WebElement pesquisarElemento(By tipoPesquisa) {
+        return webDriver.findElement(tipoPesquisa);
     }
 }

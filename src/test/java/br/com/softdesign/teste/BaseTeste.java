@@ -1,5 +1,6 @@
 package br.com.softdesign.teste;
 
+import br.com.softdesign.utilitarios.Navegador;
 import br.com.softdesign.utilitarios.TipoNavegador;
 import org.junit.After;
 import org.junit.Before;
@@ -19,7 +20,7 @@ public abstract class BaseTeste {
 
     @BeforeClass
     public static void configurarWebDriver() {
-        TipoNavegador.utilizarChrome();
+        TipoNavegador.utilizarDriverNavegador(Navegador.CHROME);
     }
 
     @Before

@@ -12,9 +12,9 @@ public class GerentePagina extends BasePagina {
 
     public void adicionarNovoCliente() {
         getInteracao().clicarElemento(By.cssSelector("button[ ng-click = \"addCust()\"]"));
-        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"fName\"]"), DadosAleatorios.nomeAletario());
-        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"lName\"]"), DadosAleatorios.sobreNomeAleatorio());
-        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"postCd\"]"), DadosAleatorios.codigoPostalAleatorio());
+        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"fName\"]"), DadosAleatorios.gerarNomeAleatorio());
+        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"lName\"]"), DadosAleatorios.gerarSobreNomeAleatorio());
+        getInteracao().inserirTextoElemento(By.cssSelector("input[ng-model = \"postCd\"]"), DadosAleatorios.gerarCodigoPostalAleatorio());
         getInteracao().clicarElemento(By.cssSelector("button[type = \"submit\"]"));
     }
 
